@@ -7,21 +7,25 @@
     <title>Formulario de Contato</title>
 </head>
 <body>
-    <form>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="5c32bfd0-d3c9-4c0c-a1a0-18be968e6ea2">
+
         <h1>Entre em <span>Contato</span></h1>
         
         <div>
-            <input type="text" class="name" placeholder="Nome">
-            <input type="email" class="email" placeholder="E-mail">
+            <input type="text" class="name" name="nome" placeholder="Nome">
+            <input type="email" class="email" name="email" placeholder="E-mail">
         </div>
         <div>
-            <input type="number" class="tel" placeholder="(00)00000-0000">
-            <input type="text" class="assunto" placeholder="Assunto">
+            <input type="number" class="tel" name="tel" placeholder="(00) 00000-0000">
+            <input type="text" class="assunto" name="assunto" placeholder="Assunto">
         </div>
 
-        <textarea placeholder="Mensagem"></textarea>
+        <textarea placeholder="Mensagem" name="mensagem" cols="4" rows="10"></textarea>
 
-        <button>Envia Mensagem</button>
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+        <button type="submit">Envia Mensagem</button>
     </form>
 </body>
 </html>
